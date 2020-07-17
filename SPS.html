@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>  
+<html>  
+  
+<head>  
+    <title>  
+        Stone Paper Scissors  
+    </title> 
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head> 
+  
+<body>  
+      
+    <h1 style = "text-align:center; color:purple;">  
+        Stone Paper Scissors  
+    </h1>  
+      
+    <p id = "GFG_UP" style = 
+        "text-align:center; font-size: 15px; font-weight: bold;">  
+    </p>
+	<div class="container" style="text-align:center" >
+		<button id = "stone" onclick = "Stone()">  
+			Stone  
+		</button>
+		<button id = "paper" onclick = "Paper()">  
+			Paper  
+		</button>
+		<button id = "sc" onclick = "Sc()">  
+			Scissor  
+		</button>
+	</div>
+	<hr>
+    <!--<p id = "GFG_DOWN" style =  
+        "text-align:center; font-size: 24px; font-weight: bold; color: red;">  
+    </p> 
+	 -->
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-4 col-md-4">
+		<p id = "User" style = " font-size: 20px; font-weight: bold; color: green;">  
+    </p>
+	</div>
+	<div class="col-xs-4 col-md-4">
+		<p id = "Tie" style = "text-align:center; font-size: 20px; font-weight: bold; color:orange;">  
+    </p>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<p id = "Comp" style = " font-size: 20px; font-weight: bold; color: red;">  
+    </p>
+	</div>
+	</div>
+	</div>
+	<hr>
+	<div class="container">
+<div class="row">
+	<div class="col-md-4 col-xs-4">
+	<img id="IMGU" style="width:100%;height:100%;" src="https://img.favpng.com/24/24/25/mr-bean-cartoon-animated-series-television-show-png-favpng-2GXPHPhZfgcdw8uw6YFj9Q9gY.jpg" alt="User Side"> </img>
+	</div>
+	<div class="col-md-4 col-xs-4">
+		<hr>
+		<p id="Stat" style="text-align:center;font-size: 28px; font-weight: bold; color: black;"></p>
+		<hr>
+	</div>
+	<div class="col-md-4 col-xs-4">
+	<img id="IMGC" style="width:100%;height:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbi4ziJEcQJRWZE7QwHqSD4va5Wu_jSlB7nA&usqp=CAU" alt="Computer Side"> </img>
+</div>
+</div>
+</div>
+    <script>  
+        var up = document.getElementById('GFG_UP');  
+        //var down = document.getElementById('GFG_DOWN');  
+        var arr = ["Stone", "Paper","Scissor"]; 
+		var user=0;
+		var cuser=0;
+		var tie=0;
+        var User = document.getElementById('User');
+        var Tie = document.getElementById('Tie');
+        var Comp = document.getElementById('Comp');		
+        var imu=document.getElementById('IMGU');
+		var imc=document.getElementById('IMGC');
+		var stat=document.getElementById('Stat');
+		
+		up.innerHTML = "<hr>" + arr + "<hr>"; 
+        
+		var stim="https://upload.wikimedia.org/wikipedia/commons/a/aa/GabbroRockCreek1.jpg";
+		var paim="https://upload.wikimedia.org/wikipedia/commons/2/2f/Paper_450x450.jpg";
+		var scim="https://upload.wikimedia.org/wikipedia/commons/7/76/Pair_of_scissors_with_black_handle%2C_2015-06-07.jpg";
+		function Stone() {
+			var ans = Math.floor(Math.random() * arr.length);
+			imu.src=stim;
+			if(arr[ans]=="Stone")
+			{
+				tie = tie + 1;
+				//down.innerHTML =  arr[ans];
+				imc.src=stim;
+				stat.innerHTML="TIE";
+			}
+            else if(arr[ans]=="Paper") 
+			{ 
+				cuser=cuser+1;
+				stat.innerHTML="Loss";
+				//down.innerHTML =arr[ans];
+				imc.src=paim;
+			}
+			else
+			{ 
+				user=user+1;
+				stat.innerHTML="WIN";
+				imc.src=scim;
+				//down.innerHTML =  arr[ans];
+			}
+
+			Score();
+		}
+		function Paper() {
+			var ans = Math.floor(Math.random() * arr.length);
+			imu.src=paim;
+			if(arr[ans]=="Paper")
+			{
+				imc.src=paim;
+				tie = tie + 1;
+				//down.innerHTML =  arr[ans];
+				stat.innerHTML="TIE";
+			}
+            else if(arr[ans]=="Scissor") 
+			{ 
+				stat.innerHTML="Loss";
+				cuser=cuser+1;
+				imc.src=scim;
+				//down.innerHTML =  arr[ans];
+			}
+			else
+			{ 
+				imc.src=stim;
+				user=user+1;
+				stat.innerHTML="WIN";
+				//down.innerHTML =  arr[ans];
+			}
+			Score();
+		}
+		function Sc() {
+			var ans = Math.floor(Math.random() * arr.length);
+			imu.src=scim;
+			if(arr[ans]=="Scissor")
+			{
+				stat.innerHTML="TIE";
+				tie = tie + 1;
+				imc.src=scim;
+				//down.innerHTML =  arr[ans];
+			}
+            else if(arr[ans]=="Stone") 
+			{
+				stat.innerHTML="Loss";			
+				imc.src=stim;
+				cuser=cuser+1;
+				//down.innerHTML =  arr[ans];
+			}
+			else
+			{ 
+				imc.src=paim;
+				user=user+1;
+				//down.innerHTML =  arr[ans];
+				stat.innerHTML="WIN";
+				
+			}
+			
+			Score();
+		}
+		function Score()
+		{
+			User.innerHTML="You "+user;
+			Tie.innerHTML="Tie "+tie;
+			Comp.innerHTML="Computer "+cuser;
+		}
+		
+		
+    </script>  
+</body>  
+  
+</html> 

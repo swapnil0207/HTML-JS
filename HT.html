@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>  
+<html>  
+  
+<head>  
+    <title>  
+        Heads or Tails  
+    </title> 
+	 <link rel="stylesheet" href="bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+  
+<body style = "text-align:center;">  
+      
+    <h1 style = "color:purple;">  
+        Heads or Tails  
+    </h1>  
+      
+    <p id = "GFG_UP" style = 
+        "font-size: 15px; font-weight: bold;">  
+    </p>
+    <button id = "button" onclick = "GFG_Fun()">  
+        Toss my coin  
+    </button>  	      
+    <p id = "GFG_DOWN" style =  
+        "font-size: 24px; font-weight: bold; color: red;">  
+    </p> 
+	
+	<img id="IMG" src="https://media.giphy.com/media/6jqfXikz9yzhS/giphy.gif" alt="rett()"> </img>
+
+    <script>  
+        var up = document.getElementById('GFG_UP');  
+        var down = document.getElementById('GFG_DOWN');  
+        var arr = ["Heads", "Tails"]; 
+		var flag=0;
+        up.innerHTML = "Click on the button to check " 
+               + "your luck <br><hr>" + arr[0] +" or "+ arr[1] + "<hr>"; 
+        
+		function GFG_Fun() {
+			var ans=Math.floor(Math.random() * arr.length); 
+            if(ans==0)
+			{
+				flag=1;
+				down.innerHTML =  arr[ans];
+				document.getElementById("IMG").src="https://qphs.fs.quoracdn.net/main-qimg-9c81a54813716fccd8e3608ab2f51dcf";
+			}
+            else
+			{ 
+				down.innerHTML =  arr[ans];
+				document.getElementById("IMG").src="https://qphs.fs.quoracdn.net/main-qimg-148ae81e6fe0500e130fb547026a9b26";
+			}
+		}  
+		
+		
+    </script>  
+</body>  
+  
+</html> 
