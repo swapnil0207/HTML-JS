@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>  
+<html>  
+  
+<head>  
+    <title>  
+        Learn Tables  
+    </title> 
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head> 
+  
+<body>  
+      
+    <h1 style = "text-align:center; color:purple;">  
+        Learn Tables  
+    </h1>  
+      
+    <p id = "GFG_UP" style = 
+        "text-align:center; font-size: 15px; font-weight: bold;">  
+    </p>
+	<div class="container" style="text-align:center" >
+		<input id="inp" type="number" placeholder="Enter a Number"></input>
+		<button value="0" id = "stone" onclick = "opt()"> 
+			Multiplier  
+		</button>
+	</div>
+	<hr>
+	<div class="container" style="text-align:center" >
+		<input id="inp1" style="visibility:hidden" type="number" placeholder="Guess the number to fit in blank"></input>
+		<button  id = "next" style="visibility:hidden" onclick = "Next()"> 
+			Next Number  
+		</button>
+	</div>
+	<hr>
+    <p id = "GFG_DOWN" style =  
+        "text-align:center; font-size: 24px; font-weight: bold; color: red;">  
+    </p> 
+	<p id = "tablis" style =  
+        "text-align:center; font-size: 24px; font-weight: bold;">  
+    </p>  
+	
+    <script>  
+        var up = document.getElementById('GFG_UP');  
+        var down = document.getElementById('GFG_DOWN');  
+		var next = document.getElementById('next'); 
+		var fin = document.getElementById('stone'); 		
+        var arr = []; 
+		var inp=document.getElementById('inp');
+		var inp1=document.getElementById('inp1');
+		var tablis=document.getElementById('tablis');
+		var arr1=[];
+		var i=0;
+		var str="";
+		var inj=1;
+		
+		var inc=1;
+		function opt(){
+		
+		if(inp.value==0){
+		alert("Enter Valid number");
+		return;}
+		if(fin.value=="0"){
+		next.style.visibility="visible";
+		inp.style.visibility="visible";
+		Mul();}
+		else{
+		next.style.visibility="hidden";
+		inp1.style.visibility="hidden";
+		fin.style.visibility="visible";
+		Mulnew();}
+		}
+		function Mulnew(){
+		var a=inp.value;
+		for(i=1;i<=10;i++)
+		{
+			arr[i]=i*a;
+		}
+		up.innerHTML=arr.join(' ');		
+		for(i=1;i<=10;i++)
+		{
+		str=inp.value+" X "+i+" = "+ "__"+"<br>";
+		arr1[i]=str;
+		}
+		tablis.innerHTML=arr1.join('');
+
+		fin.innerHTML="Enter New Number";
+		fin.value="0";
+		inp.style.visibility="visible";
+		inj=1;
+		}
+		 
+		function Mul(){
+		var a=inp.value;
+		for(i=1;i<=10;i++)
+		{
+			arr[i]=i*a;
+		}
+		up.innerHTML=arr.join(' ');		
+		for(i=1;i<=10;i++)
+		{
+		str=inp.value+" X "+i+" = "+ "__"+"<br>";
+		arr1[i]=str;
+		}
+		tablis.innerHTML=arr1.join('');
+		next.style.visibility="visible";
+		inp1.style.visibility="visible";
+
+		fin.innerHTML="Change Number ?";
+		fin.value="1";
+		inp.style.visibility="hidden";
+		}
+		function Next(){
+		
+		var nex=inp1.value;
+		var a=arr[inj];
+		
+		if(nex==a){
+		if(inj==10){
+		down.innerHTML="Congo you made it!";
+		str=inp.value+" X "+inj+" = "+ nex+"<br>";
+		arr1[inj]=str;
+		tablis.innerHTML=arr1.join('');
+		return;
+		}
+		down.innerHTML=nex+" is correct answer guess next";
+		down.style.color="green";
+		str=inp.value+" X "+inj+" = "+ nex+"<br>";
+		arr1[inj]=str;
+		len=arr1.length;
+		tablis.innerHTML=arr1.join('');
+		
+		inj++;
+		}
+		else{
+		down.innerHTML=nex+" is wrong answer";
+		down.style.color="red";
+			}
+		}
+    </script>  
+</body>  
+  
+</html> 
