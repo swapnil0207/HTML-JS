@@ -4,7 +4,280 @@
 <head>  
     <title>  
         S&L  
+    </title> <!DOCTYPE HTML>  
+<html>  
+  
+<head>  
+    <title>  
+        S&L  
     </title> 
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head> 
+  
+<body>  
+      
+    <h1 style = "text-align:center; color:purple;">  
+		 S&L
+    </h1>  
+      
+    <p id = "GFG_UP" style = 
+        "text-align:center; font-size: 15px; font-weight: bold;">  
+    Rules: If you step on a tile which has a number divisible by seven then you have to move 7 steps back whosoever reachs Tile 108 wins<br>Good Luck!!!
+	</p>
+	<div class="container" style="text-align:center" >
+		
+		<button  id = "stone" onclick = "Die()"> 
+			Roll Die  
+		</button>
+	</div>
+	<hr>
+<div class="container">
+	<div class="row">
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p108">108</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p107">107</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p106">106</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p105">105</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p104">104</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p103">103</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p102">102</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p101">101</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p100">100</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p99">99</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p98">98</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p97">97</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p96">96</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p95">95</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p94">94</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p93">93</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p92">92</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p91">91</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p90">90</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p89">89</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p88">88</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p87">87</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p86">86</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p85">85</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p84">84</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p83">83</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p82">82</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p81">81</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p80">80</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p79">79</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p78">78</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p77">77</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p76">76</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p75">75</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p74">74</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p73">73</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p72">72</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p71">71</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p70">70</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p69">69</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p68">68</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p67">67</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p66">66</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p65">65</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p64">64</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p63">63</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p62">62</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p61">61</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p60">60</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p59">59</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p58">58</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p57">57</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p56">56</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p55">55</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p54">54</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p53">53</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p52">52</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p51">51</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p50">50</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p49">49</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p48">48</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p47">47</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p46">46</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p45">45</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p44">44</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p43">43</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p42">42</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p41">41</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p40">40</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p39">39</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p38">38</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p37">37</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p36">36</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p35">35</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p34">34</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p33">33</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p32">32</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p31">31</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p30">30</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p29">29</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p28">28</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p27">27</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p26">26</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p25">25</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p24">24</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p23">23</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p22">22</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p21">21</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p20">20</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p19">19</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p18">18</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p17">17</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p16">16</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p15">15</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p14">14</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p13">13</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p12">12</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p11">11</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p10">10</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p9">9</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p8">8</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p7">7</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p6">6</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p5">5</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p4">4</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p3">3</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p2">2</p> </div>
+<div class="col-md-1 col-xs-1 col-s-1" style="background-color:yellow"> <p id="p1">1</p> </div>
+
+
+
+
+
+ 
+
+	</div>
+    </div>
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6 col-xs-6 col-s-6" >
+    <p id = "GFG_DOWN" style =  
+        "text-align:center; font-size: 24px; font-weight: bold; color: red;">  
+    </p>
+	<p id = "GFG_DOWN2" style =  
+        "text-align:center; font-size: 24px; font-weight: bold; color: red;">  
+    </p>
+	<p id = "GFG_DOWN1" style =  
+        "text-align:center; font-size: 24px; font-weight: bold; color: red;">  
+    </p>	
+		
+	</div>
+	<div class="col-md-6 col-xs-6 col-s-6">
+	<p id = "tablis" style =  
+        "text-align:center; font-size: 24px; font-weight: bold;">  
+    </p>  
+	<p id = "tablis2" style =  
+        "text-align:center; font-size: 24px; font-weight: bold;">  
+    </p>  
+	<p id = "tablis1" style =  
+        "text-align:center; font-size: 24px; font-weight: bold;">  
+    </p>  
+	</div>
+	</div>
+    </div>
+	<script>  
+        var up = document.getElementById('GFG_UP');  
+        var down = document.getElementById('GFG_DOWN');  
+		var down1 = document.getElementById('GFG_DOWN1');  
+		var down2 = document.getElementById('GFG_DOWN2');  
+		var next = document.getElementById('next'); 
+		var fin = document.getElementById('stone'); 		
+        var arr = [1,2,3,4,5,6]; 
+		var inp=document.getElementById('inp');
+		var inp1=document.getElementById('inp1');
+		var tablis=document.getElementById('tablis');
+		var tablis1=document.getElementById('tablis1');		
+		var tablis2=document.getElementById('tablis2');		
+		var i=0;
+		var n=0;
+		var ucr=0;
+		var ccr=0;
+		var str="p";
+		var temps='';
+		var ntemp="p1";
+		var ctemps='';
+		var cntemp="p1";
+		function Die(){
+			i=Math.floor(Math.random(arr)*arr.length);
+			ucr=ucr+arr[i];
+			down2.innerHTML="";
+			if(ucr%7==0){
+			down2.innerHTML="Oppse wrong foot "+ucr+" go back 7 tiles";
+			ucr=ucr-7;
+			}
+			if(ucr<=101){
+			temps=str+ucr;
+			down.innerHTML="You got "+arr[i];
+			document.getElementById(ntemp).style.backgroundColor="yellow";
+			document.getElementById(temps).style.backgroundColor="cyan";
+			ntemp=temps;
+			}
+			else if(ucr+arr[i]<108){
+			temps=str+ucr;
+			document.getElementById(ntemp).style.backgroundColor="yellow";
+			document.getElementById(temps).style.backgroundColor="cyan";
+			down.innerHTML="You got "+arr[i]+"<br>You Need "+(108-ucr)+" to WIN!";
+			ntemp=temps;
+			console.log(ucr);
+			console.log(arr[i]);
+			}
+			else if(ucr==108){
+			down.innerHTML="You WON!!! <br>Got "+arr[n];
+			console.log(ucr);
+			alert("Congo you won");
+			down1.innerHTML="Current Position "+ucr;
+			window.location.reload();
+			}
+			else
+			ucr=ucr-arr[i];
+			down1.innerHTML="Current Position "+ucr;
+			Comp();
+		}
+		
+
+		function Comp(){
+			n=Math.floor(Math.random(arr)*arr.length);
+			ccr=ccr+arr[n];
+			tablis2.innerHTML="";
+			if(ccr%7==0){
+			tablis2.innerHTML="Oppse wrong foot "+ccr+" go back 7 tiles";
+			ccr=ccr-7;
+			}
+			if(ccr<102){
+			ctemps=str+ccr;
+			tablis.innerHTML="Computer got "+arr[n];
+			document.getElementById(cntemp).style.backgroundColor="yellow";
+			document.getElementById(ctemps).style.backgroundColor="magenta";
+			cntemp=ctemps;
+			}
+			else if(ccr+arr[n]<108){
+
+				ctemps=str+ccr;
+				document.getElementById(cntemp).style.backgroundColor="yellow";
+				document.getElementById(ctemps).style.backgroundColor="magenta";
+				tablis.innerHTML="Computer got "+arr[n]+"<br>Computer Needs "+(108-ccr)+" to WIN!";
+				cntemp=ctemps;
+			}
+			else if(ccr==108){
+				tablis.innerHTML="Computer WON!!! <br>Got "+arr[n];
+				alert("Computer won try again");
+				tablis1.innerHTML="Current Position "+ccr;
+				window.location.reload();
+				}
+			else
+				ccr=ccr-arr[n];
+				tablis1.innerHTML="Current Position "+ccr;
+		}
+
+
+    </script>  
+</body>  
+  
+</html> 
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
